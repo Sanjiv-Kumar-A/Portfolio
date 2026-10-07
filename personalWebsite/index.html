@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjiv Kumar A | AI & ML Engineer & Developer Portfolio</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio of Sanjiv Kumar A — B.Tech Artificial Intelligence & Machine Learning Student (CGPA 9.34/10) at RMD Engineering College. Oracle Agentic AI Certified, AI Developer Intern, Japanese N5, ICPC Participant.">
+    <meta name="keywords" content="Sanjiv Kumar A, AI Developer, Machine Learning, Agentic AI, RMD Engineering College, Python, Java, C++, SQL, Portfolio, ICPC">
+    <meta name="author" content="Sanjiv Kumar A">
+    
+    <!-- OpenGraph / Social Sharing -->
+    <meta property="og:title" content="Sanjiv Kumar A — AI & ML Engineer Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Sanjiv Kumar A: AI & ML Developer, Oracle Agentic AI Certified, competitive programmer, and innovator.">
+    <meta property="og:image" content="assets/sanjiv_avatar.png">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Canvas Interactive Particles Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-code">&lt;</span>
+                <span class="brand-name">Sanjiv.AI</span>
+                <span class="brand-code">/&gt;</span>
+                <span class="status-pulse" title="Available for AI Internships & Projects"></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+                <a href="#academic" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Academics</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+                <a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certs</a>
+                <a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="#roadmap" class="nav-link"><i class="fa-solid fa-compass"></i> Roadmap</a>
+                <a href="#contact" class="nav-link nav-btn-contact">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <button class="icon-btn" id="terminal-toggle-btn" title="Open Interactive AI Console (Ctrl+K)">
+                    <i class="fa-solid fa-terminal"></i>
+                </button>
+                <button class="icon-btn" id="sound-toggle-btn" title="Toggle Audio FX">
+                    <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+                </button>
+                <button class="icon-btn" id="theme-toggle-btn" title="Toggle Dark/Light Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Floating Action Bar for AI Console -->
+    <button class="floating-terminal-trigger" id="floating-terminal-trigger" title="Launch Sanjiv AI Terminal">
+        <i class="fa-solid fa-robot"></i> <span>AI Console</span>
+    </button>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-pill hero-badge">
+                    <i class="fa-solid fa-sparkles"></i> AI & Machine Learning Developer
+                </div>
+                <h1 class="hero-title">
+                    Hello, I'm <span class="gradient-text">Sanjiv Kumar A</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typing-prefix">I specialize in </span>
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    2nd Year B.Tech student in Artificial Intelligence & Machine Learning at 
+                    <strong>RMD Engineering College</strong> with an overall <strong>CGPA of 9.34 / 10</strong>. 
+                    Passionate about building agentic AI systems, competitive problem-solving, and transforming complex algorithms into real-world software.
+                </p>
+
+                <!-- Key Metrics Quick View -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-value" data-count="9.34" data-decimals="2">0.00</span>
+                        <span class="stat-label">Overall CGPA</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-count="3" data-decimals="0">0</span>
+                        <span class="stat-label">SRMC Levels Cleared</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">N5</span>
+                        <span class="stat-label">Japanese Certified</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">Oracle</span>
+                        <span class="stat-label">Agentic AI Certified</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <button class="btn btn-secondary" id="open-resume-btn">
+                        <i class="fa-solid fa-file-pdf"></i> View Resume Details
+                    </button>
+                    <a href="#skills" class="btn btn-outline">
+                        <i class="fa-solid fa-layer-group"></i> Explore Skills
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="avatar-wrapper">
+                    <div class="avatar-glow-ring"></div>
+                    <div class="avatar-container">
+                        <img src="assets/sanjiv_avatar.png" alt="Sanjiv Kumar A Avatar" class="avatar-img">
+                    </div>
+                    <!-- Orbiting Skill Badges -->
+                    <div class="orbiting-badge badge-1" title="Agentic AI">
+                        <i class="fa-solid fa-brain"></i> Agentic AI
+                    </div>
+                    <div class="orbiting-badge badge-2" title="Python & ML">
+                        <i class="fa-brands fa-python"></i> Python
+                    </div>
+                    <div class="orbiting-badge badge-3" title="Competitive Programming">
+                        <i class="fa-solid fa-code"></i> ICPC
+                    </div>
+                    <div class="orbiting-badge badge-4" title="Japanese Language">
+                        <i class="fa-solid fa-language"></i> JLPT N5
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <a href="#about" aria-label="Scroll down">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINERS -->
+    <main>
+        <!-- ABOUT & PROFILE SUMMARY SECTION -->
+        <section id="about" class="section section-padded">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-user-astronaut"></i> Discover My Journey</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="grid grid-2-col gap-lg align-center">
+                    <div class="about-card glass-card">
+                        <div class="card-header-icon">
+                            <i class="fa-solid fa-quote-left icon-gradient"></i>
+                        </div>
+                        <h3 class="card-title">Core Philosophy & Motivation</h3>
+                        <p class="text-body lead-text">
+                            "I enjoy breaking down complex problems and finding patterns in them — which is what first drew me to AI and Machine Learning. Beyond academics, I challenge myself through competitive exams like the Srinivasa Ramanujan Mathematical Competition and am always picking up new tools and technologies. I believe in learning by building, and I'm looking for opportunities to move from coursework to real, hands-on experience."
+                        </p>
+                        <div class="quote-signature">
+                            — <em>Learning by building, growing through curiosity — one project at a time.</em>
+                        </div>
+                    </div>
+
+                    <div class="about-summary-box glass-card">
+                        <h3 class="card-title"><i class="fa-solid fa-id-card"></i> Profile Summary</h3>
+                        <p class="text-body mb-md">
+                            A dedicated second-year Artificial Intelligence and Machine Learning student at 
+                            <strong>RMD Engineering College</strong>, maintaining an outstanding academic record with a <strong>CGPA of 9.34</strong>. 
+                            Passionate about working in areas that deal with Artificial Intelligence and its real-world applications, with a growing foundation strengthened through certifications in <strong>agentic AI systems, soft skills, mathematical problem-solving, and Japanese language learning</strong>.
+                        </p>
+                        
+                        <div class="objective-box">
+                            <div class="obj-header"><i class="fa-solid fa-bullseye"></i> Career Objective</div>
+                            <p class="obj-text">
+                                To build a career in the IT sector working closely with Artificial Intelligence, while developing a strong foundation on the software development side. Seeking internship and project opportunities to gain hands-on, industry-level exposure in <strong>AI model development, data-driven problem solving, and intelligent automation</strong> — with a firm commitment to continuous learning and staying current with evolving technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlights Bar -->
+                <div class="highlights-grid mt-xl">
+                    <div class="highlight-item glass-card text-center">
+                        <div class="hl-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>Agentic AI Systems</h4>
+                        <p>Oracle Certified in agentic AI application architecture & agent frameworks</p>
+                    </div>
+                    <div class="highlight-item glass-card text-center">
+                        <div class="hl-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <h4>Math & Logic Competency</h4>
+                        <p>Cleared Levels 1, 2 & 3 of the Srinivasa Ramanujan Mathematical Competition</p>
+                    </div>
+                    <div class="highlight-item glass-card text-center">
+                        <div class="hl-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4>Competitive Coding</h4>
+                        <p>Active ICPC participant experienced in team problem solving & optimization</p>
+                    </div>
+                    <div class="highlight-item glass-card text-center">
+                        <div class="hl-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h4>Global Aptitude</h4>
+                        <p>Certified Japanese Language N5 practitioner from Mirai Academy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMICS SECTION -->
+        <section id="academic" class="section section-padded bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-graduation-cap"></i> Academic Performance</span>
+                    <h2 class="section-title">Education & <span class="gradient-text">Grades</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Academic Counter Metrics -->
+                <div class="academic-cards-grid">
+                    <div class="academic-metric-card glass-card">
+                        <div class="metric-top">
+                            <span class="metric-badge">Overall</span>
+                            <i class="fa-solid fa-award metric-icon"></i>
+                        </div>
+                        <div class="metric-value gradient-text counter" data-target="9.34" data-decimals="2">0.00</div>
+                        <div class="metric-label">CGPA / 10</div>
+                        <div class="metric-subtext">RMD Engineering College</div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 93.4%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="academic-metric-card glass-card">
+                        <div class="metric-top">
+                            <span class="metric-badge">Sem 2</span>
+                            <i class="fa-solid fa-chart-line metric-icon"></i>
+                        </div>
+                        <div class="metric-value counter" data-target="9.458" data-decimals="3">0.000</div>
+                        <div class="metric-label">Semester 2 GPA</div>
+                        <div class="metric-subtext">AI & ML Department</div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 94.58%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="academic-metric-card glass-card">
+                        <div class="metric-top">
+                            <span class="metric-badge">Sem 1</span>
+                            <i class="fa-solid fa-star metric-icon"></i>
+                        </div>
+                        <div class="metric-value counter" data-target="9.23" data-decimals="2">0.00</div>
+                        <div class="metric-label">Semester 1 GPA</div>
+                        <div class="metric-subtext">AI & ML Department</div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 92.3%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="academic-metric-card glass-card">
+                        <div class="metric-top">
+                            <span class="metric-badge">Schooling</span>
+                            <i class="fa-solid fa-school metric-icon"></i>
+                        </div>
+                        <div class="metric-value counter" data-target="92" data-decimals="0">0</div>
+                        <div class="metric-label">10th & 12th Marks (%)</div>
+                        <div class="metric-subtext">Apple Perks International School</div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Timeline Timeline Card -->
+                <div class="academic-timeline mt-xl">
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-badge">2024 — Present</div>
+                            <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
+                            <h4 class="text-accent">RMD Engineering College</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Currently in <strong>2nd Year</strong> (AI & ML Department). Coursework covers core Computer Science fundamentals, Object-Oriented Programming, Data Structures & Algorithms, Discrete Mathematics, Machine Learning Foundations, Web Development, and Agentic Systems.</p>
+                            <div class="timeline-tags mt-sm">
+                                <span class="tag">CGPA: 9.34 / 10</span>
+                                <span class="tag">Sem 1: 9.23</span>
+                                <span class="tag">Sem 2: 9.458</span>
+                                <span class="tag">AI & ML Specialization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-badge">Higher Secondary & High School</div>
+                            <h3>School Education (10th & 12th Grade)</h3>
+                            <h4 class="text-accent">Apple Perks International School</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Completed secondary and higher secondary education with top honors and consistent academic performance across science and mathematics disciplines.</p>
+                            <div class="timeline-tags mt-sm">
+                                <span class="tag">10th Grade: 92%</span>
+                                <span class="tag">12th Grade: 92%</span>
+                                <span class="tag">Mathematics & Science Focus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive GPA Calculator Widget -->
+                <div class="gpa-interactive-widget glass-card mt-xl">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-calculator"></i> Interactive Academic GPA Visualizer</h3>
+                        <p>Explore Sanjiv's consistent academic growth across semesters</p>
+                    </div>
+                    <div class="gpa-chart-container">
+                        <div class="gpa-bar-item">
+                            <div class="gpa-bar-fill" style="--height: 92.3%;">
+                                <span class="gpa-val">9.23</span>
+                            </div>
+                            <span class="gpa-lbl">Sem 1 GPA</span>
+                        </div>
+                        <div class="gpa-bar-item">
+                            <div class="gpa-bar-fill highlight-bar" style="--height: 94.58%;">
+                                <span class="gpa-val">9.458</span>
+                            </div>
+                            <span class="gpa-lbl">Sem 2 GPA</span>
+                        </div>
+                        <div class="gpa-bar-item">
+                            <div class="gpa-bar-fill overall-bar" style="--height: 93.4%;">
+                                <span class="gpa-val">9.34</span>
+                            </div>
+                            <span class="gpa-lbl">Overall CGPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS MATRIX SECTION -->
+        <section id="skills" class="section section-padded">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-code"></i> Technical & Interpersonal Stack</span>
+                    <h2 class="section-title">Skills & <span class="gradient-text">Competencies</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Skills</button>
+                    <button class="filter-btn" data-filter="programming">Programming</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="ai">AI & Domains</button>
+                    <button class="filter-btn" data-filter="soft">Soft Skills</button>
+                </div>
+
+                <!-- Skills Cards Grid -->
+                <div class="skills-grid mt-lg">
+                    <!-- Programming Languages -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-icon-header">
+                            <i class="fa-brands fa-java skill-cat-icon"></i>
+                            <h3>Java</h3>
+                        </div>
+                        <p>Core Java, Object-Oriented Programming, Data Structures & Algorithms, Logic Building.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-icon-header">
+                            <i class="fa-brands fa-python skill-cat-icon"></i>
+                            <h3>Python</h3>
+                        </div>
+                        <p>AI/ML Libraries, Scripting, Problem Solving, Data Processing, Competitive Coding.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-code skill-cat-icon"></i>
+                            <h3>C++</h3>
+                        </div>
+                        <p>System Level Logic, STL, Time Complexity Optimization, ICPC Contest Coding.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-database skill-cat-icon"></i>
+                            <h3>SQL</h3>
+                        </div>
+                        <p>Relational Database Queries, Schema Design, Data Modeling & Join Operations.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Designing Languages -->
+                    <div class="skill-card glass-card" data-category="web">
+                        <div class="skill-icon-header">
+                            <i class="fa-brands fa-html5 skill-cat-icon"></i>
+                            <h3>HTML5</h3>
+                        </div>
+                        <p>Semantic Document Structure, Accessible Layouts, SEO Best Practices.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="web">
+                        <div class="skill-icon-header">
+                            <i class="fa-brands fa-css3-alt skill-cat-icon"></i>
+                            <h3>CSS3</h3>
+                        </div>
+                        <p>Modern Layouts (Flexbox/Grid), Glassmorphic Styling, Responsive UI & Keyframe Animations.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="web">
+                        <div class="skill-icon-header">
+                            <i class="fa-brands fa-js skill-cat-icon"></i>
+                            <h3>JavaScript (ES6+)</h3>
+                        </div>
+                        <p>DOM Manipulation, Dynamic Web Apps, Async/Await, Canvas Rendering & Event Architecture.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                    </div>
+
+                    <!-- Areas of Interest & AI -->
+                    <div class="skill-card glass-card highlight-card" data-category="ai">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-robot skill-cat-icon"></i>
+                            <h3>Agentic AI Systems</h3>
+                        </div>
+                        <p>Autonomous AI Agent Architectures, Tool-calling LLM Workflows, Prompt Engineering & Oracle Agentic AI.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card highlight-card" data-category="ai">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-brain skill-cat-icon"></i>
+                            <h3>Artificial Intelligence & ML</h3>
+                        </div>
+                        <p>Machine Learning Principles, Intelligent Automation, Data-Driven Model Development & Research.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-card glass-card" data-category="soft">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-comments skill-cat-icon"></i>
+                            <h3>Communication & Presentation</h3>
+                        </div>
+                        <p>Clear idea presentation, technical documentation, confident public speaking in ideathons.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="soft">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-people-group skill-cat-icon"></i>
+                            <h3>Teamwork & Leadership</h3>
+                        </div>
+                        <p>Collaborative problem-solving tested in ICPC programming contests and group projects.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="soft">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-puzzle-piece skill-cat-icon"></i>
+                            <h3>Problem Solving & Adaptability</h3>
+                        </div>
+                        <p>Analytical thinking under time constraints, SRMC mathematical problem solving, quick tool adaptation.</p>
+                        <div class="skill-level">
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Areas of Interest Grid Tags -->
+                <div class="areas-of-interest-container glass-card mt-xl text-center">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Primary Areas of Interest</h3>
+                    <div class="interest-tags-wrapper mt-md">
+                        <span class="interest-badge"><i class="fa-solid fa-sparkles"></i> Artificial Intelligence</span>
+                        <span class="interest-badge"><i class="fa-solid fa-gears"></i> Machine Learning</span>
+                        <span class="interest-badge"><i class="fa-solid fa-robot"></i> Agentic AI Systems</span>
+                        <span class="interest-badge"><i class="fa-solid fa-flask"></i> AI Applications & Research</span>
+                        <span class="interest-badge"><i class="fa-solid fa-sliders"></i> Intelligent Automation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERNSHIPS & EXPERIENCE SECTION -->
+        <section id="experience" class="section section-padded bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-briefcase"></i> Industry Exposure</span>
+                    <h2 class="section-title">Work & <span class="gradient-text">Internships</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="experience-card glass-card glow-border">
+                    <div class="exp-header-row">
+                        <div class="company-brand">
+                            <div class="company-logo-placeholder">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="exp-role">AI Developer Intern</h3>
+                                <h4 class="exp-company gradient-text">ANTYK Technologies</h4>
+                            </div>
+                        </div>
+                        <div class="exp-meta text-right">
+                            <div class="exp-date-badge"><i class="fa-regular fa-calendar"></i> 1 June 2026 – 15 June 2026</div>
+                            <div class="exp-location"><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu</div>
+                        </div>
+                    </div>
+
+                    <div class="exp-body mt-md">
+                        <p class="lead-text">
+                            Worked on Artificial Intelligence projects and carried out assigned responsibilities with dedication and professionalism. Gained practical hands-on exposure to AI project work in an active internship environment.
+                        </p>
+                        
+                        <div class="exp-highlights-list mt-md">
+                            <div class="exp-hl-item">
+                                <i class="fa-solid fa-circle-check hl-icon-check"></i>
+                                <span>Applied Artificial Intelligence techniques to real-world software modules and problem scenarios.</span>
+                            </div>
+                            <div class="exp-hl-item">
+                                <i class="fa-solid fa-circle-check hl-icon-check"></i>
+                                <span>Collaborated with senior team members on data-driven model tasks and software integration.</span>
+                            </div>
+                            <div class="exp-hl-item">
+                                <i class="fa-solid fa-circle-check hl-icon-check"></i>
+                                <span>Demonstrated high standards of dedication, punctuality, and analytical problem-solving.</span>
+                            </div>
+                        </div>
+
+                        <div class="exp-footer-letter glass-card mt-lg">
+                            <div class="letter-badge"><i class="fa-solid fa-file-circle-check"></i> Internship Record & Evaluation</div>
+                            <p>
+                                <em>"The internship completion letter records the overall performance and quality of work as <strong>GOOD</strong>. Completion letter issued 22 June 2026."</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="section section-padded">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-certificate"></i> Verified Credentials</span>
+                    <h2 class="section-title">Certifications & <span class="gradient-text">Learning</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="grid grid-2-col gap-lg">
+                    <!-- Cert 1: Oracle Agentic AI -->
+                    <div class="cert-card glass-card glow-on-hover" onclick="openCertModal('oracle')">
+                        <div class="cert-badge-top">Oracle</div>
+                        <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Oracle Agentic AI Certification</h3>
+                        <p class="cert-issuer">Oracle Certified</p>
+                        <p class="cert-desc">Official certification in agentic AI systems, autonomous agent workflows, and practical applications.</p>
+                        <div class="cert-action">
+                            <span>View Credential Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2: Srinivasa Ramanujan Mathematical Competition -->
+                    <div class="cert-card glass-card glow-on-hover" onclick="openCertModal('srmc')">
+                        <div class="cert-badge-top">Mathematics</div>
+                        <div class="cert-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <h3>Srinivasa Ramanujan Mathematical Competition</h3>
+                        <p class="cert-issuer">SRMC Board</p>
+                        <p class="cert-desc">Successfully cleared <strong>Level 1, Level 2 and Level 3</strong> demonstrating high analytical and mathematical prowess.</p>
+                        <div class="cert-action">
+                            <span>View Credential Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3: Japanese Language N5 -->
+                    <div class="cert-card glass-card glow-on-hover" onclick="openCertModal('japanese')">
+                        <div class="cert-badge-top">Mirai Academy</div>
+                        <div class="cert-icon"><i class="fa-solid fa-torii-gate"></i></div>
+                        <h3>Japanese Language — N5</h3>
+                        <p class="cert-issuer">Completed at Mirai Academy</p>
+                        <p class="cert-desc">Earned an N5-level Japanese language certificate covering fundamental grammar, kanji, listening, and vocabulary.</p>
+                        <div class="cert-action">
+                            <span>View Credential Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4: Soft Skill Development NPTEL -->
+                    <div class="cert-card glass-card glow-on-hover" onclick="openCertModal('nptel')">
+                        <div class="cert-badge-top">NPTEL</div>
+                        <div class="cert-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <h3>Soft Skill Development</h3>
+                        <p class="cert-issuer">NPTEL Certification</p>
+                        <p class="cert-desc">Comprehensive certification in effective workplace communication, interpersonal skills, and professional development.</p>
+                        <div class="cert-action">
+                            <span>View Credential Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS & EXTRACURRICULAR SECTION -->
+        <section id="achievements" class="section section-padded bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-trophy"></i> Key Milestones</span>
+                    <h2 class="section-title">Achievements & <span class="gradient-text">Activities</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="achievements-timeline">
+                    <!-- Item 1: ICPC -->
+                    <div class="achieve-card glass-card">
+                        <div class="achieve-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="achieve-content">
+                            <span class="achieve-tag">Competitive Coding</span>
+                            <h3>ICPC Participation (International Collegiate Programming Contest)</h3>
+                            <p>Participated in the prestigious International Collegiate Programming Contest, gaining invaluable hands-on experience in team-based competitive programming, complex algorithmic problem solving, and performance under strict time constraints.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: SRMC Clearances -->
+                    <div class="achieve-card glass-card">
+                        <div class="achieve-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                        <div class="achieve-content">
+                            <span class="achieve-tag">Mathematics Milestone</span>
+                            <h3>Srinivasa Ramanujan Mathematical Competition Clearance</h3>
+                            <p>Successfully cleared Level 1, Level 2, and Level 3 consecutively. Demonstrated rigorous mathematical intuition, proof logic, and numerical problem-solving consistency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Japanese Language N5 -->
+                    <div class="achieve-card glass-card">
+                        <div class="achieve-icon"><i class="fa-solid fa-language"></i></div>
+                        <div class="achieve-content">
+                            <span class="achieve-tag">Language & Culture</span>
+                            <h3>Japanese Language N5 Qualification</h3>
+                            <p>Earned an official N5-level Japanese language certificate from Mirai Academy, showing dedication to global learning and cross-cultural adaptability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Extracurricular & Hackathons -->
+                    <div class="achieve-card glass-card">
+                        <div class="achieve-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="achieve-content">
+                            <span class="achieve-tag">Extracurricular</span>
+                            <h3>Hackathons, Ideathons & Paper Presentations</h3>
+                            <p>Active participant in competitive coding and hackathons. Enthusiastic about entering ideathons and technical paper presentations to apply classroom AI/ML learning to real, time-bound challenges while presenting ideas clearly and confidently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER ROADMAP SECTION -->
+        <section id="roadmap" class="section section-padded">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-compass"></i> Strategic Vision</span>
+                    <h2 class="section-title">Career <span class="gradient-text">Plan</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="glass-card roadmap-container">
+                    <p class="text-body lead-text text-center mb-xl">
+                        "My long-term goal is to establish myself in the IT sector, working at the intersection of software development and Artificial Intelligence. I plan to build a strong technical foundation on the software side — strengthening my programming and web development skills alongside my AI/ML coursework — while steadily gaining exposure to real-world AI applications through internships and projects. I intend to keep learning continuously, staying updated with new tools, frameworks, and research in the field, so I can grow into a well-rounded AI/software professional."
+                    </p>
+
+                    <div class="roadmap-steps">
+                        <div class="roadmap-step">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h4>Strong Foundation (Current)</h4>
+                                <p>Mastering AI/ML coursework, data structures in Java/Python/C++, web development, and maintaining CGPA excellence (9.34).</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h4>Real-World AI Internships</h4>
+                                <p>Building on experience from ANTYK Technologies with production-ready agentic AI systems & ML model development.</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h4>Advanced AI & Software Engineering</h4>
+                                <p>Deploying intelligent automation tools, competing in top-tier hackathons, and contributing to AI research.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE AI TERMINAL MODAL SECTION -->
+        <div id="terminal-modal" class="modal-backdrop">
+            <div class="modal-box terminal-modal-box">
+                <div class="terminal-bar">
+                    <div class="terminal-dots">
+                        <span class="dot red" onclick="closeTerminalModal()"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">sanjiv-ai-assistant --bash -- 80x24</div>
+                    <button class="terminal-close-btn" onclick="closeTerminalModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-welcome">
+                        <pre class="ascii-art">
+   _____             ___ _            ___  _____ 
+  / __/ __ _  ___   / (_) | _____    / _ |/  _/ / 
+ _\ \/ _ `/ _/ _ \ / / / |/ / _ \  / __ // //_/  
+/___/\_,_/_//_//_//_/_/|___/\___/ /_/ |_/___(_)  
+                        </pre>
+                        <p>Welcome to <strong>Sanjiv AI Interactive Console v2.6</strong>.</p>
+                        <p>Type <span class="term-hl">'help'</span> to see available commands or try <span class="term-hl">'cgpa'</span>, <span class="term-hl">'skills'</span>, <span class="term-hl">'internship'</span>, <span class="term-hl">'certs'</span>, <span class="term-hl">'contact'</span>, <span class="term-hl">'matrix'</span>.</p>
+                    </div>
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="term-prompt">sanjiv@portfolio:~$</span>
+                        <input type="text" id="terminal-input" autofocus placeholder="Type a command (e.g., help)...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATE DETAILS MODAL -->
+        <div id="cert-modal" class="modal-backdrop">
+            <div class="modal-box cert-modal-box glass-card">
+                <button class="modal-close-btn" onclick="closeCertModal()"><i class="fa-solid fa-xmark"></i></button>
+                <div id="cert-modal-content">
+                    <!-- Dynamic Content Loaded by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT & CONNECT SECTION -->
+        <section id="contact" class="section section-padded bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-paper-plane"></i> Let's Collaborate</span>
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="grid grid-2-col gap-lg align-start">
+                    <!-- Contact Info Card -->
+                    <div class="contact-info-card glass-card">
+                        <h3>Let's Build Something Intelligent Together</h3>
+                        <p class="text-body mb-lg">
+                            I am open to internship opportunities, research collaborations, open-source AI projects, and technical discussions. Feel free to drop me a message!
+                        </p>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                            <div>
+                                <h4>Institution</h4>
+                                <p>RMD Engineering College, Chennai, Tamil Nadu</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div>
+                                <h4>Department & Year</h4>
+                                <p>B.Tech AI & ML Department • 2nd Year</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Chennai, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-award"></i></div>
+                            <div>
+                                <h4>Academic Standing</h4>
+                                <p>9.34 CGPA | Oracle Agentic AI Certified</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Handles -->
+                        <div class="social-links-wrapper mt-lg">
+                            <h4>Connect On Networks</h4>
+                            <div class="social-icons">
+                                <a href="https://github.com" target="_blank" rel="noopener" class="social-btn" title="GitHub Profile">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" title="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="mailto:sanjivkumar@example.com" class="social-btn" title="Send Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <button class="social-btn" id="quick-copy-email-btn" title="Copy Contact Summary">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="contact-form-card glass-card">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="sender-name">Your Full Name</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="sender-name" placeholder="e.g. Dr. Alex Vance" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email">Your Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="sender-email" placeholder="e.g. alex.vance@techcorp.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-subject">Subject</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <input type="text" id="sender-subject" placeholder="Internship Opportunity / AI Collaboration" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-message">Message</label>
+                                <textarea id="sender-message" rows="5" placeholder="Hi Sanjiv, we would love to discuss an AI Internship role..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-glow">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <div class="footer-brand mb-md">
+                <span class="brand-code">&lt;</span>
+                <span class="brand-name">Sanjiv Kumar A</span>
+                <span class="brand-code">/&gt;</span>
+            </div>
+            <p class="footer-tagline">
+                <em>— Learning by building, growing through curiosity — one project at a time. —</em>
+            </p>
+            <p class="copyright mt-md">
+                &copy; <span id="current-year">2026</span> Sanjiv Kumar A. All Rights Reserved. Crafted with AI & Web Passion.
+            </p>
+            <div class="back-to-top-wrapper mt-md">
+                <a href="#hero" class="back-to-top-btn" title="Back to Top">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
